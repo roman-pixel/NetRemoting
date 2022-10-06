@@ -8,11 +8,18 @@ namespace Server_obj
 {
     public class ServerObj : MarshalByRefObject
     {
-        public double ServerMethod(int a1, double a2)
+        public int ServerMethod(string data)
         {
-            a2 = a1 + Math.Sqrt(a2);
+            var res = 1;
+            var number = Convert.ToInt32(data);
+
+            for (int i = 1; i <= number; i++)
+            {
+                res *= i;
+            }
+
             Console.WriteLine("Вызов метода 1");
-            return a2;
+            return res;
         }
     }
 }

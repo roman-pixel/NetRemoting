@@ -18,10 +18,15 @@ namespace Client
             Udal_obj.Udal_obj obj2= (Udal_obj.Udal_obj)Activator.GetObject(typeof(Udal_obj.Udal_obj),
                 "tcp://localhost:11000/met2");
             tcpCanC.StartListening(obj2);
-            Console.WriteLine($"Результат вычислений: {obj1.ServerMethod(5, 4)}");
-            Console.WriteLine(obj2.Hello());
-            Console.WriteLine("Введите имя\n");
-            Console.WriteLine(obj2.Greeting(Console.ReadLine()));
+
+            Console.WriteLine("Введите целое число:");
+            Console.WriteLine($"Результат вычислений: {obj1.ServerMethod(Console.ReadLine())}");
+
+            Console.WriteLine("Введите слово:");
+            var word = Console.ReadLine();
+            Console.WriteLine("Введите значение k:");
+            var k = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(obj2.LetterWrapping(word, k));
             Console.ReadLine();
         }
     }
