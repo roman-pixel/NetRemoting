@@ -24,7 +24,7 @@ namespace Client
 
             Console.WriteLine("Введите слово:");
             var word = Console.ReadLine();
-            Console.WriteLine($"Количество букв \"о\" {obj2.LetterWrapping(word)}");
+            Console.WriteLine($"Количество букв \"о\" {obj2.Letter(word)}");
             Console.ReadLine();
         }
     }

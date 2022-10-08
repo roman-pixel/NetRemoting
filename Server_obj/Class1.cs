@@ -19,7 +19,7 @@ namespace Server_obj
             }
 
             Console.WriteLine("Вызов метода 1");
-            return a2;
+            return res;
         }
     }
 }
