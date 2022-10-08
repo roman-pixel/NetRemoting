@@ -11,13 +11,19 @@ namespace Udal_obj
         public string Hello()
         {
             Console.WriteLine("Вызов метода 2");
-            return "Привет!!";
-        }
 
-        public string Greeting(string name)
-        {
-            Console.WriteLine("Вызов приветсвия");
-            return "Привет" + name;
+            if (word.Length > k)
+            {
+                var firstLetters = word.Substring(0, k);
+                word = word.Remove(0, k);
+                res = word + firstLetters;
+            }
+            else
+            {
+                res = "Длина слова меньше значения k";
+            }
+
+            return res;
         }
     }
 }
